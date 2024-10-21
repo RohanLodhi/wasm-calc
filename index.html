@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasm Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input { margin: 5px; padding: 5px; }
+        button { padding: 10px 20px; }
+        #result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>WebAssembly Calculator</h1>
+    <input id="num1" type="number" placeholder="Enter number 1" />
+    <input id="num2" type="number" placeholder="Enter number 2" />
+    <br>
+    <button onclick="performOperation('add')">Add</button>
+    <button onclick="performOperation('subtract')">Subtract</button>
+    <button onclick="performOperation('multiply')">Multiply</button>
+    <button onclick="performOperation('divide')">Divide</button>
+    <div id="result">Result: </div>
+
+    <!-- Import the generated wasm file and the calculator logic -->
+    <script src="calculator.js"></script>
+    <script src="main.js"></script> <!-- The newly separated JavaScript logic -->
+</body>
+</html>
